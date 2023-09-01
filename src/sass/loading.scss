@@ -1,0 +1,46 @@
+.loading{
+    // background-color: red;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--blueBorder-color);
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .img{
+        animation: fade-out 3s forwards;
+    }
+    .image-shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        opacity: 1;
+        animation: fade-out 3s forwards;
+    }
+} 
+@keyframes fade-out1 {
+    from {
+        width: 10rem;
+        height: 10rem;
+    }
+    to {
+        width: 20rem;
+        height: 20rem;
+    }
+  }
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
